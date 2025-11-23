@@ -9,6 +9,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.querySelector(".message").textContent = "!! Number Empty !!";
   } else if (guess === rand) {
     document.querySelector(".message").textContent = " WOW! You Won!!";
+    document.querySelector(".rn").textContent = rand;
   } else if (guess < rand) {
     document.querySelector(".message").textContent = "Too Low !!!";
   } else if (guess > rand) {
