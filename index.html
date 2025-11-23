@@ -7,16 +7,30 @@
   </head>
   <body style="background-color: lightgrey">
     <center>
-      <br /><br />
-      <h4>____ Guess a Number between 0 to 5 ____</h4>
-      <form onsubmit="sD()">
-        <input type="number" id="text" autofocus />
-        <br /><br />
-        <button type="submit">Okay</button>
-      </form>
-      <br /><br />
-      <span id="guessed"></span>
+      <br />
+      <h3 class="rn">?</h3>
+      <span class="message">Start guessing....</span><br /><br />
+      <input type="text" class="text" />
+      <button type="button" class="btn">Guess</button>
+
+      <script>
+        const rand = Math.trunc(Math.random() * 20) + 1;
+        // document.querySelector(".rn").textContent = rand;
+
+        document.querySelector(".btn").addEventListener("click", function () {
+          const guess = Number(document.querySelector(".text").value);
+          if (!guess) {
+            document.querySelector(".message").textContent =
+              "!! Number Empty !!";
+          } else if (guess === rand) {
+            document.querySelector(".message").textContent = "WOW! You Won!!";
+          } else if (guess < rand) {
+            document.querySelector(".message").textContent = "Too Low !!!";
+          } else if (guess > rand) {
+            document.querySelector(".message").textContent = "Too High !!!";
+          }
+        });
+      </script>
     </center>
-    <script src="game_code.js"></script>
   </body>
 </html>
