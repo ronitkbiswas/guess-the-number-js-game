@@ -10,11 +10,23 @@
   <body style="background-color: lightgrey">
     <center>
       <br />
-      <h3 style="font-size: 25">!! Guess the number between 0 - 10 !!</h3>
-      <h3 class="rn">the number<br /><br />?</h3>
+      <h3 style="font-size: 25">
+        !-- Guess the lucky number between 0 - 10 --!
+      </h3>
+      <h3 class="theNumberTxt">[ the number ]</h3>
+
+      <h3 class="rn">?</h3>
       <span class="message">Start guessing....</span><br /><br />
-      <input type="text" class="text" autofocus />
+      <input
+        type="text"
+        class="text"
+        autofocus
+        placeholder="type a number..."
+      /><br /><br />
       <button type="button" class="btn">Guess</button>
+      <br />
+      <br /><br />
+      <span class="chancesLeft">Chances Left</span>
     </center>
     <script src="game_code.js"></script>
   </body>
