@@ -1,7 +1,7 @@
 "use strict";
 
 const rand = Math.trunc(Math.random() * 10) + 1;
-document.querySelector(".rn").textContent = rand;
+// document.querySelector(".rn").textContent = rand;
 
 let cl = 10;
 document.querySelector(".chancesLeft").textContent = "Chances left: " + cl;
@@ -14,8 +14,6 @@ document.querySelector(".btn").addEventListener("click", function () {
   } else if (guess === rand) {
     document.querySelector(".message").textContent = " WOW! You Won!!";
     document.querySelector(".rn").textContent = rand;
-    document.querySelector(".chancesLeft").textContent =
-      "You had only " + cl + " chances left.. Congratulations!";
   } else if (guess < rand) {
     document.querySelector(".message").textContent = "Too Low !!!";
     cl--;
