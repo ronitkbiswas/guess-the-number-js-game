@@ -18,3 +18,8 @@
 .chancesLeft {
   font-size: 25px;
 }
+.reloadBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 4px 50px;
+}

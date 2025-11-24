@@ -1,9 +1,9 @@
 "use strict";
 
 const rand = Math.trunc(Math.random() * 10) + 1;
-document.querySelector(".rn").textContent = rand;
+// document.querySelector(".rn").textContent = rand;
 
-let cl = 10;
+let cl = 5;
 document.querySelector(".chancesLeft").textContent = "Chances left: " + cl;
 
 document.querySelector(".btn").addEventListener("click", function () {
@@ -14,11 +14,15 @@ document.querySelector(".btn").addEventListener("click", function () {
   } else if (guess === rand) {
     document.querySelector(".message").textContent = "✅ WOW! You Won!!";
     document.querySelector(".rn").textContent = rand;
-    // ✅ Create reload button when player wins
+
+    // ✅ Create reload button just below the win message
     const reloadBtn = document.createElement("button");
-    reloadBtn.textContent = "Play Again 🔁";
+    reloadBtn.textContent = "🔁 Play Again";
     reloadBtn.classList.add("reloadBtn");
-    document.body.appendChild(reloadBtn);
+
+    // Insert the button right after the message element
+    const msg = document.querySelector(".message");
+    msg.insertAdjacentElement("afterend", reloadBtn);
 
     reloadBtn.addEventListener("click", function () {
       location.reload();
