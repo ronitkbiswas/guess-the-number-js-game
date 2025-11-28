@@ -16,7 +16,7 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.querySelector(".rn").textContent = rand;
 
     const reloadBtn = document.createElement("button");
-    reloadBtn.textContent = "🔁 Play Again..";
+    reloadBtn.textContent = "🔁 Play Again...";
     reloadBtn.classList.add("reloadBtn");
 
     const msg = document.querySelector(".message");

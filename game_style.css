@@ -10,13 +10,22 @@
   font-size: 30px;
 }
 .btn {
-  padding: 4px 50px;
+  padding: 10px 50px;
+  box-shadow: 1px 2px grey;
 }
 .text {
-  padding: 4px 50px;
+  padding: 10px 50px;
+  border: 1px solid;
+  color: darkred;
+  border-radius: 4px;
+  font-size: 20px;
 }
 .chancesLeft {
   font-size: 25px;
+  border: 1px solid;
+  padding: 7px;
+  color: darkred;
+  border-radius: 4px;
 }
 .reloadBtn {
   display: block;
