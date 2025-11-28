@@ -15,12 +15,10 @@ document.querySelector(".btn").addEventListener("click", function () {
     document.querySelector(".message").textContent = "✅ WOW! You Won!!";
     document.querySelector(".rn").textContent = rand;
 
-    // ✅ Create reload button just below the win message
     const reloadBtn = document.createElement("button");
-    reloadBtn.textContent = "🔁 Play Again";
+    reloadBtn.textContent = "🔁 Play Again..";
     reloadBtn.classList.add("reloadBtn");
 
-    // Insert the button right after the message element
     const msg = document.querySelector(".message");
     msg.insertAdjacentElement("afterend", reloadBtn);
 
