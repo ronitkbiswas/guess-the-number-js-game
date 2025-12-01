@@ -1,45 +1,34 @@
 "use strict";
 
-const rand = Math.trunc(Math.random() * 10) + 1;
-// document.querySelector(".rn").textContent = rand;
-
-let cl = 5;
-document.querySelector(".chancesLeft").textContent = "Chances left: " + cl;
-
+let sn = Math.trunc(Math.random() * 10) + 1;
+// document.querySelector('.number').textContent = sn;
+let score = 10;
 document.querySelector(".btn").addEventListener("click", function () {
-  const guess = Number(document.querySelector(".text").value);
-
+  const guess = document.querySelector(".guess").value;
   if (!guess) {
-    document.querySelector(".message").textContent = "!! Number Empty !!";
-  } else if (guess === rand) {
-    document.querySelector(".message").textContent = "✅ WOW! You Won!!";
-    document.querySelector(".rn").textContent = rand;
-
-    const reloadBtn = document.createElement("button");
-    reloadBtn.textContent = "🔁 Play Again...";
-    reloadBtn.classList.add("reloadBtn");
-
-    const msg = document.querySelector(".message");
-    msg.insertAdjacentElement("afterend", reloadBtn);
-
-    reloadBtn.addEventListener("click", function () {
-      location.reload();
-    });
-  } else if (guess < rand) {
-    document.querySelector(".message").textContent = "Too Low !!!";
-    cl--;
-    document.querySelector(".chancesLeft").textContent = "Chances left: " + cl;
-    if (cl <= 0) {
-      document.querySelector(".message").textContent = "GAME OVER!!";
-      document.querySelector(".chancesLeft").textContent = "";
+    document.querySelector(".message").textContent = "⛔ No Number !";
+  } else if (guess < sn) {
+    document.querySelector(".message").textContent = "👇 Too Low !";
+    score--;
+    document.querySelector(".score").textContent = "Score: " + score;
+    if (score < 0) {
+      document.querySelector(".message").textContent = "😩 GAME OVER !";
+      score = 0;
     }
-  } else if (guess > rand) {
-    document.querySelector(".message").textContent = "Too High !!!";
-    cl--;
-    document.querySelector(".chancesLeft").textContent = "Chances left: " + cl;
-    if (cl <= 0) {
-      document.querySelector(".message").textContent = "GAME OVER!!";
-      document.querySelector(".chancesLeft").textContent = "";
+  } else if (guess > sn) {
+    document.querySelector(".message").textContent = "👆 Too High !";
+    score--;
+    document.querySelector(".score").textContent = "Score: " + score;
+    if (score < 0) {
+      document.querySelector(".message").textContent = "😩 GAME OVER !";
+      score = 0;
     }
+  } else {
+    document.querySelector(".message").textContent = "🎉 Congratulations !";
+    document.querySelector(".number").textContent = sn;
   }
+});
+
+document.querySelector(".btnReset").addEventListener("click", function () {
+  location.reload();
 });
