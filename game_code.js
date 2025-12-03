@@ -1,7 +1,7 @@
 "use strict";
 
 let sn = Math.trunc(Math.random() * 10) + 1;
-// document.querySelector(".number").textContent = sn;
+//document.querySelector(".number").textContent = sn;
 let score = 10;
 
 let displayResult = function (message) {
@@ -25,7 +25,11 @@ document.querySelector(".btn").addEventListener("click", function () {
     }
   }
 });
-
 document.querySelector(".btnReset").addEventListener("click", function () {
-  location.reload();
+  displayResult("⚡Start Guessing.....");
+  sn = Math.trunc(Math.random() * 10) + 1;
+  score = 10;
+  document.querySelector(".score").textContent = "Score: " + score;
+  document.querySelector(".guess").value = "";
+  document.querySelector(".number").textContent = "?";
 });
