@@ -9,9 +9,7 @@
   color: rgb(88, 148, 9);
   font-size: 30px;
 }
-.btn {
-  box-shadow: 1px 2px grey;
-}
+
 .text {
   padding: 10px 50px;
   border: 1px solid;
@@ -27,5 +25,20 @@
   border-radius: 4px;
 }
 .btnReset {
+  background-color: white;
+  border: 0px;
+  padding: 7px;
+  border-radius: 1%;
+}
+.btn {
+  padding: 5px 10px;
   box-shadow: 1px 2px grey;
+}
+.btn:hover {
+  padding: 5px 10px;
+  box-shadow: 1px 2px grey;
+}
+.guess {
+  padding: 5px 20px;
+  font-size: 13px;
 }

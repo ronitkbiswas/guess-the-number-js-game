@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="src/style.css"> -->
      <link rel="stylesheet" href="game_style.css">
+     <link rel="icon" type="image/png" sizes="32x32" href="https://www.w3schools.com/favicon-32x32.png">
      <title>Random Number Guessing Game</title>
     <style> 
     body {
-      background-color: white;
+      background-color: rgb(208, 207, 207);
       text-align: center;
     }
     </style>
@@ -18,16 +19,17 @@
     <span style="font-size:23px;">{ Guess The Secert Number }</span>
     <br><br>
     <span style="font-size:19px;">(Between 0 - 10)</span>
-    <br>
-    <p style="font-size:50px;" class="number">?</p>
     
+    <p style="font-size:50px;" class="number">?</p>
     <p class="message"  style="font-size:25px">⚡Start Guessing.....</p>
-    <br>
+    
     <input type="text" class="guess" placeholder="guess the number....">
     <button type="button" class="btn">Guess</button>
     <br><br>
-    <p style="font-size:20px;" class="score">💯 Score: 10</p>
-    <br><br>
+    <p style="font-size:17px;" class="score">💯 Score: 10</p>
+    
+    <p style="font-size:17px;" class="highscore">🏆 High Score: 0</p>
+    <br>
     <button type="button" class="btnReset">🔄️ Reset Game</button>
     <script src="game_code.js"></script>
   </body>
