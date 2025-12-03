@@ -1,31 +1,28 @@
 "use strict";
 
 let sn = Math.trunc(Math.random() * 10) + 1;
-// document.querySelector('.number').textContent = sn;
+// document.querySelector(".number").textContent = sn;
 let score = 10;
+
+let displayResult = function (message) {
+  document.querySelector(".message").textContent = message;
+};
+
 document.querySelector(".btn").addEventListener("click", function () {
-  const guess = document.querySelector(".guess").value;
+  const guess = Number(document.querySelector(".guess").value);
   if (!guess) {
-    document.querySelector(".message").textContent = "⛔ No Number !";
-  } else if (guess < sn) {
-    document.querySelector(".message").textContent = "👇 Too Low !";
-    score--;
-    document.querySelector(".score").textContent = "Score: " + score;
-    if (score < 0) {
-      document.querySelector(".message").textContent = "😩 GAME OVER !";
-      score = 0;
-    }
-  } else if (guess > sn) {
-    document.querySelector(".message").textContent = "👆 Too High !";
-    score--;
-    document.querySelector(".score").textContent = "Score: " + score;
-    if (score < 0) {
-      document.querySelector(".message").textContent = "😩 GAME OVER !";
-      score = 0;
-    }
-  } else {
-    document.querySelector(".message").textContent = "🎉 Congratulations !";
+    displayResult("⛔ No Number !");
+  } else if (guess === sn) {
+    displayResult("🎉 Congratulations !");
     document.querySelector(".number").textContent = sn;
+  } else if (guess !== sn) {
+    displayResult(guess < sn ? "👇 Too Low !" : "👆 Too High !");
+    score--;
+    document.querySelector(".score").textContent = "Score: " + score;
+    if (score < 0) {
+      score = 0;
+      displayResult("😩 GAME OVER !");
+    }
   }
 });
 
