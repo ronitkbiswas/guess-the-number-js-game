@@ -38,3 +38,29 @@ document.querySelector(".btnReset").addEventListener("click", function () {
   document.querySelector(".guess").value = "";
   document.querySelector(".number").textContent = "?";
 });
+// binary Search in sorted array
+// by ronitkbiswas
+const arr = [12,15,17,18,21,26,33];
+const search = 15;
+function binarySearch(arr, search) {
+  let leftEnd = 0;
+  let rightEnd = arr.length - 1;
+  while(leftEnd <= rightEnd) {
+    let mid = Math.floor((leftEnd+rightEnd) / 2);
+    if(arr[mid] === search) {
+      return mid;
+    }
+    if(arr[mid] < search) {
+      leftEnd = mid + 1;
+    } else {
+      rightEnd = mid - 1;
+    }
+  }
+  return -1;
+}
+const result = binarySearch(arr, search);
+if (result === -1) {
+  console.log('Not Found at any Index by Binary Search');
+} else {
+  console.log('Found at index:',result);
+}
