@@ -64,3 +64,21 @@ if (result === -1) {
 } else {
   console.log('Found at index:',result);
 }
+// linear search in array
+// by ronitkbiswas
+const arr = [12,15,17,18,21,26,33];
+const search = 33;
+function LinearSearch(arr, search) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === search) {
+      return i;
+    }
+  }
+  return -1;
+}
+const result = LinearSearch(arr,search);
+if (result === -1) {
+  console.log('Not Found at any index by linear search');
+} else {
+  console.log('found at index:',result);
+}
