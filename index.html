@@ -20,17 +20,8 @@
     <div
       class="whole bg-white shadow-xl rounded-2xl px-10 py-8 max-w-md w-full mx-4 border border-gray-300 flex flex-col items-center justify-center"
     >
-      <h1
-        class="text-3xl font-bold text-green-800 mb-2 tracking-wide"
-        style="font-size: 26px"
-      >
-        Guess The Secret Number
-      </h1>
-
-      <p class="text-lg text-gray-700 mb-4">🤖 Between 0 - 10</p>
-
       <p
-        class="number text-7xl font-semibold mb-4 flex justify-center text-gray-800"
+        class="number text-7xl font-semibold mb-3.5 flex justify-center text-gray-800"
       >
         ?
       </p>
@@ -52,13 +43,29 @@
         </button>
       </div>
 
-      <p class="score text-lg mb-1 text-gray-800">💯 Score: 10</p>
+      <table>
+        <tr>
+          <td>
+            <p class="score text-lg mb-1 text-gray-800">💯 Score: 10 < - ></p>
+          </td>
+          <td>
+            <p class="highscore text-lg mb-1 text-gray-800">🏆 High Score: 0</p>
+          </td>
+        </tr>
+      </table>
 
-      <p class="highscore text-lg mb-5 text-gray-800">🏆 High Score: 0</p>
+      <h1
+        class="text-3xl font-bold text-green-800 mb-2 tracking-wide"
+        style="font-size: 26px"
+      >
+        Guess The Secret Number
+      </h1>
+
+      <p class="text-lg text-gray-700 mb-4">🤖 Between 0 - 10</p>
 
       <button
         type="button"
-        class="btnReset bg-gray-600 hover:bg-gray-700 text-white py-1 px-2 rounded-lg font-small transition"
+        class="btnReset bg-gray-500 hover:bg-gray-700 text-white py-1 px-2 rounded-lg font-small transition"
       >
         🔄️ Reset Game
       </button>
