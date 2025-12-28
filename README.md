@@ -47,24 +47,6 @@ git clone https://github.com/ronitkbiswas/guess-the-number-js-game.git
 
 3. Run index.html in your browser.
 
-
-
-
----
-
-🧠 Game Logic Summary
-
-The computer generates a random number between 1 and 20.
-
-You enter your guess and click Check.
-
-The game tells you if your guess is too high, too low, or correct.
-
-Your score decreases with each wrong guess.
-
-
----
-
 👤 Author
 
 Ronit K Biswas
